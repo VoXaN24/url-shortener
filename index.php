@@ -4,7 +4,7 @@ session_start();
 
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="fr">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,22 +26,22 @@ session_start();
         unset($_SESSION['error']);
     }
     if (isset($_GET['error']) && $_GET['error'] == 'db') {
-        echo "<p class='alert'>Error in connecting to database!</p>";
+        echo "<p class='alert'ebdd!</p>";
     }
     if (isset($_GET['error']) && $_GET['error'] == 'inurl') {
-        echo "<p class='alert'>Not a valid URL!</p>";
+        echo "<p class='alert'>Lien non valide</p>";
     }
     if (isset($_GET['error']) && $_GET['error'] == 'dnp') {
-        echo "<p class='alert'>Ok! So I got to know you love playing! But don't play here!!!</p>";
+        echo "<p class='alert'>Ok! Bon je sais que vous êtes joueurs! Mais je ne suis pas un jeu!!!</p>";
     }
     ?>
     <form method="POST" action="functions/shorten.php">
         <div class="section group">
             <div class="col span_3_of_3">
-                <input type="url" id="input" name="url" class="input" placeholder="Enter a URL here">
+                <input type="url" id="input" name="url" class="input" placeholder="Entrer le lien ici">
             </div>
             <div class="col span_1_of_3">
-                <input type="text" id="custom" name="custom" class="input_custom" placeholder="Enable custom text"
+                <input type="text" id="custom" name="custom" class="input_custom" placeholder="Activer la personalisation"
                        disabled>
             </div>
             <div class="col span_2_of_3">
@@ -57,13 +57,13 @@ session_start();
     <script>
       function toggle () {
         if (document.getElementById('myonoffswitch').checked) {
-          document.getElementById('custom').placeholder = 'Enter your custom text'
+          document.getElementById('custom').placeholder = 'Entrer la personalisation'
           document.getElementById('custom').disabled = false
           document.getElementById('custom').focus()
         }
         else {
           document.getElementById('custom').value = ''
-          document.getElementById('custom').placeholder = 'Enable custom text'
+          document.getElementById('custom').placeholder = 'Activer la personalisation'
           document.getElementById('custom').disabled = true
           document.getElementById('custom').blur()
           document.getElementById('input').focus()
